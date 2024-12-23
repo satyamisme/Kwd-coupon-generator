@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  @page {
+    size: A4;
+    margin: 5mm;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .print-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2mm;
+    padding: 0;
+  }
+}
+
+.coupon-container {
+  width: 100mm;
+  height: 50mm;
+  page-break-inside: avoid;
+  overflow: hidden;
+}
